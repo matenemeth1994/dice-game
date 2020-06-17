@@ -1,34 +1,37 @@
+window.onload = () => {
   const firstImage = document.querySelectorAll("img")[0];
   const secondImage = document.querySelectorAll("img")[1];
-  const changeText = document.getElementById("refreshText"); 
+  const changeText = document.getElementById("refreshText");
   const randomNumberOne = Math.floor(Math.random() * 6) + 1;
   const randomNumberTwo = Math.floor(Math.random() * 6) + 1;
 
-  const a = () => {
+  const playerOneDice = () => {
     const randomDice = "./images/dice" + randomNumberOne + ".png";
     firstImage.setAttribute("src", randomDice);
   };
 
-  const b = () => {
+  const playerTwoDice = () => {
     const randomDice = "./images/dice" + randomNumberTwo + ".png";
     secondImage.setAttribute("src", randomDice);
   };
 
-  a();
-  b();
+  playerOneDice();
+  playerTwoDice();
 
   if (randomNumberOne > randomNumberTwo) {
     changeText.innerHTML = "Player 1 wins!";
- } else if (randomNumberOne < randomNumberTwo) {
+  } else if (randomNumberOne < randomNumberTwo) {
     changeText.innerHTML = "Player 2 wins!";
- } else {
-   changeText.innerHTML = "Draw!";
- }
+  } else {
+    changeText.innerHTML = "Draw!";
+  }
 
- const reload = () => {
-   window.location.reload();
- }
+  module.exports = randomNumberOne;
+  module.exports = randomNumberTwo;
+  module.exports = playerOneDice;
+  module.exports = playerTwoDice;
+};
 
-
-
-
+const reload = () => {
+  window.location.reload();
+};
