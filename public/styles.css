@@ -1,5 +1,6 @@
 body {
   background-color: #faf1d8;
+  font-family: 'Reggae One', cursive;
 }
 
 .container {
@@ -30,16 +31,29 @@ footer {
   text-align: center;
 }
 
-button {
+#roll {
+  padding: 15px 32px;
+  font-size: 16px;
+  margin: 4px auto;
+  border-radius: 10px;
+  box-shadow: 0 9px #999;
+  font-family: 'Reggae One', cursive;
   background-color: #9c060c;
   border: none;
+  outline: none;
   color: #faf1d8;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: block;
-  font-size: 16px;
-  margin: 4px auto;
   cursor: pointer;
-  border-radius: 10px;
+}
+
+#roll:hover {
+  background-color: #7a0408;
+}
+
+#roll:active {
+  background-color: #7a0408;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
