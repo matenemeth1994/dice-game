@@ -12,7 +12,6 @@ Getting hold of the number of images randomly and using conditions.
 ### How to use 
 1. Clone the repository
 2. Open index.html in live server
-3. Run jest: `npm test`
 
 ### Project Link 
 

@@ -1,10 +1,10 @@
-window.onload = () => {
-  const firstImage = document.querySelectorAll("img")[0];
-  const secondImage = document.querySelectorAll("img")[1];
-  const changeText = document.getElementById("refreshText");
+const secondImage = document.querySelectorAll("img")[1];
+const changeText = document.getElementById("refreshText");
+const firstImage = document.querySelectorAll("img")[0];
+
+const roll = () => {
   const randomNumberOne = Math.floor(Math.random() * 6) + 1;
   const randomNumberTwo = Math.floor(Math.random() * 6) + 1;
-
   const playerOneDice = () => {
     const randomDice = "./images/dice" + randomNumberOne + ".png";
     firstImage.setAttribute("src", randomDice);
@@ -25,13 +25,9 @@ window.onload = () => {
   } else {
     changeText.innerHTML = "Draw!";
   }
-
-  module.exports = randomNumberOne;
-  module.exports = randomNumberTwo;
-  module.exports = playerOneDice;
-  module.exports = playerTwoDice;
+  setTimeout(() => {
+    changeText.innerHTML = "Refresh me!";
+  }, 3000)
 };
 
-const reload = () => {
-  window.location.reload();
-};
+document.getElementById("roll").addEventListener("click", roll);
