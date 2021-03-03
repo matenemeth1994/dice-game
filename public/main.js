@@ -27,7 +27,7 @@ const roll = () => {
   }
   setTimeout(() => {
     changeText.innerHTML = "Refresh me!";
-  }, 3500)
+  }, 3000)
 };
 
 document.getElementById("roll").addEventListener("click", roll);

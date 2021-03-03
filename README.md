@@ -7,7 +7,7 @@ Getting hold of the number of images randomly and using conditions.
 * HTML  
 * CSS
 * Javascript
-* Jest
+* Bootstrap
 
 ### How to use 
 1. Clone the repository
